@@ -1,0 +1,19 @@
+docs/
+
+ai_agents_docs/
+
+node_modules/
+
+implemented_tasks/
+
+# Ignore all AI agents files
+AGENT_DISPATCH.md
+CODER.md
+DOCUMENTER.md
+PLANNER.md
+progress_template.md
+REVIEWER.md
+TESTER.md
+
+# Ignore all tasks files
+S1-T1_initialization_task.md
