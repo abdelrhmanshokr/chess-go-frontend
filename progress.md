@@ -9,6 +9,7 @@
 | S0-T3   | Initialize plan_and_progress.md | 2026-04-06   | Tracking status        |
 | S1-T1   | Initialize Next.js 14 project   | 2026-04-20   | Foundation setup       |
 | S1-T2   | Configure ESLint and Prettier   | 2026-04-21   | Code quality setup     |
+| S1-T3   | Establish Folder Structure      | 2026-04-21   | Feature-based layout    |
 
 ## Pending Tasks
 
@@ -17,7 +18,7 @@
 - [ ] Story 1: Project Initialization
   - [x] **S1-T1**: Initialize Next.js 14 project with App Router, TypeScript, and Tailwind CSS.
   - [x] **S1-T2**: Configure ESLint/Prettier for consistent styling.
-  - [ ] **S1-T3**: Establish folder structure: `src/app`, `src/components`, `src/hooks`, `src/store`, `src/lib`, `src/types`, `src/utils`.
+  - [x] **S1-T3**: Establish folder structure: `src/app`, `src/components`, `src/hooks`, `src/store`, `src/lib`, `src/types`, `src/utils`.
 - [ ] Story 2: Authentication Base
   - [ ] **S1-T4**: Create `/login` and `/register` pages with Tailwind-styled forms.
   - [ ] **S1-T5**: Implement `userStore.ts` using Zustand to manage auth state and JWT.
