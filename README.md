@@ -28,3 +28,4 @@ The frontend for **Chess GO**, a 4-player team-based chess game.
 - **S1-T1: Initialize Next.js Project**: Set up the core framework with TypeScript, Tailwind, and App Router. [S1-T1_initialization_task.md](S1-T1_initialization_task.md)
 - **S1-T2: Configure ESLint and Prettier**: Integrated linting and formatting rules for high code quality. [S1-T2_linting_prettier_task.md](S1-T2_linting_prettier_task.md)
 - **S1-T3: Establish Folder Structure**: Organized `src/` into a scalable, feature-based architecture. [S1-T3_establish_folder_structure.md](S1-T3_establish_folder_structure.md)
+- **S1-T4: Create /login and /register pages**: Implemented accessible authentication UI with reusable components. [S1-T4_auth_pages_task.md](S1-T4_auth_pages_task.md)

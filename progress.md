@@ -10,6 +10,7 @@
 | S1-T1   | Initialize Next.js 14 project   | 2026-04-20   | Foundation setup       |
 | S1-T2   | Configure ESLint and Prettier   | 2026-04-21   | Code quality setup     |
 | S1-T3   | Establish Folder Structure      | 2026-04-21   | Feature-based layout    |
+| S1-T4   | Create /login and /register pages | 2026-04-22   | Accessible Auth UI     |
 
 ## Pending Tasks
 
@@ -20,7 +21,7 @@
   - [x] **S1-T2**: Configure ESLint/Prettier for consistent styling.
   - [x] **S1-T3**: Establish folder structure: `src/app`, `src/components`, `src/hooks`, `src/store`, `src/lib`, `src/types`, `src/utils`.
 - [ ] Story 2: Authentication Base
-  - [ ] **S1-T4**: Create `/login` and `/register` pages with Tailwind-styled forms.
+  - [x] **S1-T4**: Create `/login` and `/register` pages with Tailwind-styled forms.
   - [ ] **S1-T5**: Implement `userStore.ts` using Zustand to manage auth state and JWT.
   - [ ] **S1-T6**: Develop `useAuth` hook for calling login/register endpoints.
   - [ ] **S1-T7**: Set up basic layout with a shared navbar for auth status.
@@ -76,4 +77,4 @@
 
 ## Current Focus
 
-- Sprint 1: Project Initialization
+- **S1-T4**: Create `/login` and `/register` pages (Story 2: Authentication Base)

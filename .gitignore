@@ -6,6 +6,8 @@ node_modules/
 
 implemented_tasks/
 
+.next
+
 # Ignore all AI agents files
 AGENT_DISPATCH.md
 CODER.md
@@ -19,3 +21,4 @@ TESTER.md
 S1-T1_initialization_task.md
 S1-T2_linting_prettier_task.md
 S1-T3_establish_folder_structure.md
+S1-T4_auth_pages_task.md
