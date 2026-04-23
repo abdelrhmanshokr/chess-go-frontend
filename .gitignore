@@ -16,9 +16,11 @@ PLANNER.md
 progress_template.md
 REVIEWER.md
 TESTER.md
+VERIFIER.md
 
 # Ignore all tasks files
 S1-T1_initialization_task.md
 S1-T2_linting_prettier_task.md
 S1-T3_establish_folder_structure.md
 S1-T4_auth_pages_task.md
+S1-T5_zustand_auth_store_task.md

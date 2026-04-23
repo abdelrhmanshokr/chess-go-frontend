@@ -1,10 +1,14 @@
 import Image from 'next/image';
 import TestComponent from '@/components/TestComponent';
+import StoreTestComponent from '@/components/StoreTestComponent';
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black p-8">
-      <TestComponent />
+      <div className="flex flex-col gap-4 w-full max-w-md">
+        <TestComponent />
+        <StoreTestComponent />
+      </div>
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start mt-8">
         <Image
           className="dark:invert"

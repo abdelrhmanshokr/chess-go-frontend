@@ -29,3 +29,4 @@ The frontend for **Chess GO**, a 4-player team-based chess game.
 - **S1-T2: Configure ESLint and Prettier**: Integrated linting and formatting rules for high code quality. [S1-T2_linting_prettier_task.md](S1-T2_linting_prettier_task.md)
 - **S1-T3: Establish Folder Structure**: Organized `src/` into a scalable, feature-based architecture. [S1-T3_establish_folder_structure.md](S1-T3_establish_folder_structure.md)
 - **S1-T4: Create /login and /register pages**: Implemented accessible authentication UI with reusable components. [S1-T4_auth_pages_task.md](S1-T4_auth_pages_task.md)
+- **S1-T5: Implement userStore.ts using Zustand**: Global state management for auth with persistence and hydration handling. [S1-T5_zustand_auth_store_task.md](S1-T5_zustand_auth_store_task.md)
