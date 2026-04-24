@@ -31,3 +31,4 @@ The frontend for **Chess GO**, a 4-player team-based chess game.
 - **S1-T4: Create /login and /register pages**: Implemented accessible authentication UI with reusable components. [S1-T4_auth_pages_task.md](S1-T4_auth_pages_task.md)
 - **S1-T5: Implement userStore.ts using Zustand**: Global state management for auth with persistence and hydration handling. [S1-T5_zustand_auth_store_task.md](S1-T5_zustand_auth_store_task.md)
 - **S1-T6: Develop useAuth hook**: Custom hook for API interaction, loading states, and state synchronization. [S1-T6_useAuth_hook_task.md](S1-T6_useAuth_hook_task.md)
+- **S1-T7: Set up basic layout with a shared navbar**: Global navigation with dynamic auth states and responsive design. [S1-T7_navbar_layout_task.md](S1-T7_navbar_layout_task.md)

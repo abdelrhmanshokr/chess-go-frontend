@@ -13,6 +13,7 @@
 | S1-T4   | Create /login and /register pages | 2026-04-22   | Accessible Auth UI     |
 | S1-T5   | Implement userStore.ts using Zustand | 2026-04-23   | Global state persisting |
 | S1-T6   | Develop useAuth hook           | 2026-04-24   | Auth API integration    |
+| S1-T7   | Set up basic layout with a shared navbar | 2026-04-24 | Global dynamic Navbar  |
 
 ## Pending Tasks
 
@@ -26,7 +27,7 @@
   - [x] **S1-T4**: Create `/login` and `/register` pages with Tailwind-styled forms.
   - [x] **S1-T5**: Implement `userStore.ts` using Zustand to manage auth state and JWT.
   - [x] **S1-T6**: Develop `useAuth` hook for calling login/register endpoints.
-  - [ ] **S1-T7**: Set up basic layout with a shared navbar for auth status.
+  - [x] **S1-T7**: Set up basic layout with a shared navbar for auth status.
 
 ### Sprint 2: Lobby & Matchmaking UI
 
@@ -79,4 +80,4 @@
 
 ## Current Focus
 
-- **S1-T6**: Develop `useAuth` hook (Story 2: Authentication Base)
+- **S1-T7**: Set up basic layout with a shared navbar (Final task of Sprint 1)
