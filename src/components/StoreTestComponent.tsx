@@ -4,32 +4,30 @@ import React from 'react';
 import { useUserStore } from '@/store/userStore';
 import { Button } from '@/components/ui/Button';
 import { useHasHydrated } from '@/hooks/useHasHydrated';
+import { useAuth } from '@/hooks/useAuth';
 
 /**
- * Temporary component to verify Zustand store functionality.
+ * Temporary component to verify Zustand store and useAuth hook functionality.
  * Displays current auth status and provides manual triggers for state changes.
  */
 const StoreTestComponent = () => {
-  // Access the user store to manage global authentication state.
-  const { isAuthenticated, user, setAuth, clearAuth } = useUserStore();
+  // Access the user store and auth hook.
+  const { isAuthenticated, user } = useUserStore();
+  const { login, logout, isLoading, error: authError } = useAuth();
   
   // Use the custom hydration hook to ensure we don't access client-side only store data 
   // until the component has successfully hydrated in the browser.
   const hasHydrated = useHasHydrated();
 
   /**
-   * Mock login function to test store updates.
-   * Simulates receiving data from an API and updating the global state.
+   * Mock login function to test useAuth hook.
+   * Note: This will attempt a real fetch to localhost.
    */
-  const handleMockLogin = () => {
-    setAuth(
-      { id: '123', username: 'testuser', email: 'test@example.com' },
-      'mock-jwt-token'
-    );
+  const handleTestLogin = async () => {
+    await login('test@example.com', 'password123');
   };
 
   // If the browser hasn't hydrated yet, we return null or a skeleton.
-  // This prevents hydration mismatch errors in Next.js when reading from localStorage.
   if (!hasHydrated) {
     return (
       <div className="p-6 m-4 border-2 border-dashed border-zinc-200 rounded-lg dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 animate-pulse">
@@ -40,11 +38,19 @@ const StoreTestComponent = () => {
 
   return (
     <div className="p-6 m-4 border-2 border-dashed border-zinc-300 rounded-lg dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800">
-      <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-zinc-50">Zustand Store Test</h3>
+      <h3 className="text-lg font-bold mb-4 text-zinc-900 dark:text-zinc-50">Auth Store & Hook Test</h3>
       
+      {authError && (
+        <div className="mb-4 p-2 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded text-sm border border-red-200 dark:border-red-800">
+          Error: {authError}
+        </div>
+      )}
+
       {/* Display current state from the store. */}
       <p className="mb-2 text-zinc-700 dark:text-zinc-300">
-        Status: <span className="font-mono font-bold">{isAuthenticated ? 'Authenticated' : 'Logged Out'}</span>
+        Status: <span className={`font-mono font-bold \${isAuthenticated ? 'text-green-600' : 'text-red-500'}`}>
+          {isAuthenticated ? 'Authenticated' : 'Logged Out'}
+        </span>
       </p>
       
       {isAuthenticated && user && (
@@ -56,18 +62,18 @@ const StoreTestComponent = () => {
       {/* Buttons to manually change store state for verification. */}
       <div className="flex gap-4 mt-4">
         {!isAuthenticated ? (
-          <Button onClick={handleMockLogin}>
-            Trigger Mock Login
+          <Button onClick={handleTestLogin} disabled={isLoading}>
+            {isLoading ? 'Connecting...' : 'Test Login Hook'}
           </Button>
         ) : (
-          <Button onClick={clearAuth}>
-            Trigger Logout
+          <Button onClick={logout}>
+            Trigger Logout Hook
           </Button>
         )}
       </div>
       
       <p className="mt-4 text-xs text-zinc-500 italic">
-        Tip: Login and refresh the page to verify persistence in localStorage.
+        * "Test Login Hook" attempts to fetch from API. It will fail if backend is offline.
       </p>
     </div>
   );

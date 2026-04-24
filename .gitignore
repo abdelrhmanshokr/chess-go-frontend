@@ -8,6 +8,8 @@ implemented_tasks/
 
 .next
 
+.env
+
 # Ignore all AI agents files
 AGENT_DISPATCH.md
 CODER.md
@@ -24,3 +26,4 @@ S1-T2_linting_prettier_task.md
 S1-T3_establish_folder_structure.md
 S1-T4_auth_pages_task.md
 S1-T5_zustand_auth_store_task.md
+S1-T6_useAuth_hook_task.md

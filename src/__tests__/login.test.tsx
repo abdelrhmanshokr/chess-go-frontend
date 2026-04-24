@@ -1,6 +1,13 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import LoginPage from '@/app/(auth)/login/page'
 
+// Mock the next/navigation hooks
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({
+    push: jest.fn(),
+  }),
+}));
+
 describe('LoginPage', () => {
   it('renders all login form fields', () => {
     render(<LoginPage />)

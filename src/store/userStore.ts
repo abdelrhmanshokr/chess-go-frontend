@@ -1,15 +1,6 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-
-/**
- * Interface representing the structure of a user object.
- * Centralizes user attributes used across the application for type safety.
- */
-interface User {
-  id: string;
-  username: string;
-  email: string;
-}
+import { User } from '@/types/auth';
 
 /**
  * Interface for the user store state and actions.
