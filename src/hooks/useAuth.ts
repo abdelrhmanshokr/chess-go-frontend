@@ -21,6 +21,7 @@ export const useAuth = () => {
    */
   const handleAuthResponse = async (response: Response): Promise<AuthResponse> => {
     const data = await response.json();
+    console.log("Auth API response", data);
 
     if (!response.ok) {
       const authError = data as AuthError;
@@ -31,10 +32,10 @@ export const useAuth = () => {
   };
 
   /**
-   * Logs in a user with email and password.
+   * Logs in a user with identifier (email or username) and password.
    * Updates the userStore upon success.
    */
-  const login = async (email: string, password: string) => {
+  const login = async (identifier: string, password: string) => {
     setIsLoading(true);
     setError(null);
 
@@ -42,7 +43,7 @@ export const useAuth = () => {
       const response = await fetch(API_ENDPOINTS.AUTH.LOGIN, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ identifier, password }),
       });
 
       const { user, token } = await handleAuthResponse(response);

@@ -9,8 +9,8 @@ import { Button } from '@/components/ui/Button';
 import { useAuth } from '@/hooks/useAuth';
 
 export default function LoginPage() {
-  // Initialize state to track user input for email and password fields. 
-  const [email, setEmail] = useState('');
+  // Initialize state to track user input for identifier (email/username) and password fields. 
+  const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   
   // Use the custom auth hook to manage API interaction and loading/error states.
@@ -24,8 +24,8 @@ export default function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Attempt to log in with provided credentials.
-    const result = await login(email, password);
+    // Attempt to log in with provided credentials (identifier and password).
+    const result = await login(identifier, password);
     
     // Redirect if login was successful.
     if (result.success) {
@@ -61,16 +61,16 @@ export default function LoginPage() {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4 rounded-md shadow-sm">
             <Input
-              label="Email address"
-              id="email-address"
-              name="email"
-              type="email"
-              autoComplete="email"
+              label="Email or Username"
+              id="identifier"
+              name="identifier"
+              type="text"
+              autoComplete="username"
               required
               disabled={isLoading}
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com or chessmaster"
+              value={identifier}
+              onChange={(e) => setIdentifier(e.target.value)}
             />
             
             <Input

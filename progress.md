@@ -14,6 +14,7 @@
 | S1-T5   | Implement userStore.ts using Zustand | 2026-04-23   | Global state persisting |
 | S1-T6   | Develop useAuth hook           | 2026-04-24   | Auth API integration    |
 | S1-T7   | Set up basic layout with a shared navbar | 2026-04-24 | Global dynamic Navbar  |
+| S2-T1   | Create /lobby page              | 2026-04-27   | Protected lobby route   |
 
 ## Pending Tasks
 
@@ -32,7 +33,7 @@
 ### Sprint 2: Lobby & Matchmaking UI
 
 - [ ] Story 3: Lobby & Queue
-  - [ ] **S2-T1**: Create `/lobby` page with a "Find Game" button.
+  - [x] **S2-T1**: Create `/lobby` page with a "Find Game" button.
   - [ ] **S2-T2**: Implement `uiStore.ts` for handling modal visibility and loading states.
   - [ ] **S2-T3**: Display a "Finding Teammate/Opponents..." overlay while in queue.
   - [ ] **S2-T4**: Mock the transition to a game once a "match" is found.
@@ -80,4 +81,4 @@
 
 ## Current Focus
 
-- **S1-T7**: Set up basic layout with a shared navbar (Final task of Sprint 1)
+- **S2-T1**: Create `/lobby` page (Sprint 2: Lobby & Matchmaking UI)
