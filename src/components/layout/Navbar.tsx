@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/Button';
  */
 export const Navbar = () => {
   const { isAuthenticated, user } = useUserStore();
+  console.log("user from navbar", user);
   const { logout } = useAuth();
   const hasHydrated = useHasHydrated();
 
