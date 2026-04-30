@@ -15,16 +15,17 @@
 | S1-T6   | Develop useAuth hook           | 2026-04-24   | Auth API integration    |
 | S1-T7   | Set up basic layout with a shared navbar | 2026-04-24 | Global dynamic Navbar  |
 | S2-T1   | Create /lobby page              | 2026-04-27   | Protected lobby route   |
+| S2-T2   | Implement uiStore.ts            | 2026-04-30   | Global UI state mgmt    |
 
 ## Pending Tasks
 
 ### Sprint 1: Foundation (Next.js & Auth)
 
-- [ ] Story 1: Project Initialization
+- [x] Story 1: Project Initialization
   - [x] **S1-T1**: Initialize Next.js 14 project with App Router, TypeScript, and Tailwind CSS.
   - [x] **S1-T2**: Configure ESLint/Prettier for consistent styling.
   - [x] **S1-T3**: Establish folder structure: `src/app`, `src/components`, `src/hooks`, `src/store`, `src/lib`, `src/types`, `src/utils`.
-- [ ] Story 2: Authentication Base
+- [x] Story 2: Authentication Base
   - [x] **S1-T4**: Create `/login` and `/register` pages with Tailwind-styled forms.
   - [x] **S1-T5**: Implement `userStore.ts` using Zustand to manage auth state and JWT.
   - [x] **S1-T6**: Develop `useAuth` hook for calling login/register endpoints.
@@ -34,7 +35,7 @@
 
 - [ ] Story 3: Lobby & Queue
   - [x] **S2-T1**: Create `/lobby` page with a "Find Game" button.
-  - [ ] **S2-T2**: Implement `uiStore.ts` for handling modal visibility and loading states.
+  - [x] **S2-T2**: Implement `uiStore.ts` for handling modal visibility and loading states.
   - [ ] **S2-T3**: Display a "Finding Teammate/Opponents..." overlay while in queue.
   - [ ] **S2-T4**: Mock the transition to a game once a "match" is found.
 
@@ -81,4 +82,4 @@
 
 ## Current Focus
 
-- **S2-T1**: Create `/lobby` page (Sprint 2: Lobby & Matchmaking UI)
+- **S2-T2**: Implement `uiStore.ts` (Sprint 2: Lobby & Matchmaking UI)

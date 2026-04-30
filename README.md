@@ -35,3 +35,4 @@ The frontend for **Chess GO**, a 4-player team-based chess game.
 
 ### Sprint 2: Lobby & Matchmaking UI
 - **S2-T1: Create /lobby page**: Primary user dashboard with protected routes and matchmaking entry point. [S2-T1_lobby_page_task.md](S2-T1_lobby_page_task.md)
+- **S2-T2: Implement uiStore.ts**: Global UI state management for modals, loading states, and sidebar visibility. [S2-T2_ui_store_task.md](S2-T2_ui_store_task.md)

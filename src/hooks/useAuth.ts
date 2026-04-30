@@ -40,6 +40,7 @@ export const useAuth = () => {
     setError(null);
 
     try {
+      console.log(API_ENDPOINTS.AUTH.LOGIN, { identifier, password });
       const response = await fetch(API_ENDPOINTS.AUTH.LOGIN, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useUserStore } from '@/store/userStore';
 import { useHasHydrated } from '@/hooks/useHasHydrated';
 import { FindGameButton } from '@/components/lobby/FindGameButton';
+import { MatchmakingModal } from '@/components/lobby/MatchmakingModal';
 import { Card } from '@/components/ui/Card';
 
 /**
@@ -37,6 +38,9 @@ export default function LobbyPage() {
 
   return (
     <div className="min-h-[calc(100vh-64px)] bg-zinc-50 px-4 py-8 dark:bg-zinc-950 sm:px-6 lg:px-8">
+      {/* Global UI Components Managed by uiStore */}
+      <MatchmakingModal />
+
       <div className="mx-auto max-w-4xl">
         {/* Welcoming Header */}
         <header className="mb-8">
