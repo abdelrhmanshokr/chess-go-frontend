@@ -24,11 +24,13 @@ export const Button: React.FC<ButtonProps> = ({
   // Define base styles and dynamic styles based on props.
   const baseStyles = "inline-flex items-center justify-center rounded-md font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:pointer-events-none";
   
+  // S2-T6: theme variants use theme.md tokens (accent-primary for the main CTA,
+  // surface for secondary actions) instead of the previous zinc palette.
   const variants = {
-    primary: "bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 focus-visible:outline-zinc-600",
-    secondary: "bg-zinc-100 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-700 focus-visible:outline-zinc-500",
-    outline: "border border-zinc-300 bg-transparent hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-50",
-    ghost: "bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-50",
+    primary: "bg-theme-accent-primary text-theme-bg-primary hover:brightness-110 focus-visible:outline-theme-accent-primary",
+    secondary: "bg-theme-surface text-theme-text-primary hover:brightness-125 focus-visible:outline-theme-border",
+    outline: "border border-theme-border bg-transparent hover:bg-theme-surface text-theme-text-primary",
+    ghost: "bg-transparent hover:bg-theme-surface text-theme-text-primary",
     danger: "bg-red-600 text-white hover:bg-red-700 focus-visible:outline-red-600",
   };
 

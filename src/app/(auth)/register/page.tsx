@@ -48,14 +48,14 @@ export default function RegisterPage() {
 
   return (
     // Flexbox container centered for visibility.
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 px-4 dark:bg-zinc-950">
+    <div className="flex min-h-screen items-center justify-center bg-theme-bg-primary px-4">
       <Card>
         {/* Title and Intro */}
         <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-theme-text-primary">
             Create an Account
           </h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="mt-2 text-sm text-theme-text-muted">
             Join Chess GO and start playing today
           </p>
         </div>
@@ -135,8 +135,8 @@ export default function RegisterPage() {
 
         {/* Switch to Login Link */}
         <div className="text-center text-sm">
-          <span className="text-zinc-600 dark:text-zinc-400">Already have an account? </span>
-          <Link href="/login" className="font-semibold text-zinc-900 hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300">
+          <span className="text-theme-text-muted">Already have an account? </span>
+          <Link href="/login" className="font-semibold text-theme-accent-primary hover:brightness-110">
             Sign in
           </Link>
         </div>

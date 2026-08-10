@@ -16,6 +16,12 @@
 | S1-T7   | Set up basic layout with a shared navbar | 2026-04-24 | Global dynamic Navbar  |
 | S2-T1   | Create /lobby page              | 2026-04-27   | Protected lobby route   |
 | S2-T2   | Implement uiStore.ts            | 2026-04-30   | Global UI state mgmt    |
+| S2-T3   | Display "Finding Match" overlay | 2026-08-09   | Matchmaking queue overlay |
+| S2-T5   | Define Tailwind theme tokens    | 2026-08-10   | Theme tokens in globals.css |
+| S2-T6   | Apply theme to shared UI components | 2026-08-10 | Button, Card, Navbar |
+| S2-T7   | Apply theme to Lobby & MatchmakingOverlay | 2026-08-10 | Lobby page + overlay restyled |
+| S2-T8   | Apply theme to /login and /register | 2026-08-10 | Auth pages + Input restyled |
+| S2-T4   | Mock the transition to a game   | 2026-08-10   | Timed match-found + /game stub |
 
 ## Pending Tasks
 
@@ -33,11 +39,16 @@
 
 ### Sprint 2: Lobby & Matchmaking UI
 
-- [ ] Story 3: Lobby & Queue
+- [x] Story 3: Lobby & Queue
   - [x] **S2-T1**: Create `/lobby` page with a "Find Game" button.
   - [x] **S2-T2**: Implement `uiStore.ts` for handling modal visibility and loading states.
-  - [ ] **S2-T3**: Display a "Finding Teammate/Opponents..." overlay while in queue.
-  - [ ] **S2-T4**: Mock the transition to a game once a "match" is found.
+  - [x] **S2-T3**: Display a "Finding Teammate/Opponents..." overlay while in queue.
+  - [x] **S2-T4**: Mock the transition to a game once a "match" is found.
+- [x] Story 4.0: Site Theme Update
+  - [x] **S2-T5**: Define Tailwind theme tokens (colors, typography) based on `THEME.md`.
+  - [x] **S2-T6**: Apply new theme to shared UI components (`Button`, `Card`, `Navbar`).
+  - [x] **S2-T7**: Apply new theme to Lobby page and `MatchmakingOverlay`.
+  - [x] **S2-T8**: Apply new theme to `/login` and `/register` pages.
 
 ### Sprint 3: Chess Board Component
 
@@ -82,4 +93,4 @@
 
 ## Current Focus
 
-- **S2-T2**: Implement `uiStore.ts` (Sprint 2: Lobby & Matchmaking UI)
+- **S3-T1**: Implement `ChessBoard` component (Sprint 3: Chess Board Component) — Sprint 2 complete.

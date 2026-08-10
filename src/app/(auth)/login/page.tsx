@@ -35,14 +35,14 @@ export default function LoginPage() {
 
   return (
     // Main container centered vertically and horizontally.
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 px-4 dark:bg-zinc-950">
+    <div className="flex min-h-screen items-center justify-center bg-theme-bg-primary px-4">
       <Card>
         {/* Header Section */}
         <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-theme-text-primary">
             Welcome Back
           </h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="mt-2 text-sm text-theme-text-muted">
             Please enter your details to sign in
           </p>
         </div>
@@ -94,8 +94,8 @@ export default function LoginPage() {
 
         {/* Navigation Footer */}
         <div className="text-center text-sm">
-          <span className="text-zinc-600 dark:text-zinc-400">Don't have an account? </span>
-          <Link href="/register" className="font-semibold text-zinc-900 hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300">
+          <span className="text-theme-text-muted">Don't have an account? </span>
+          <Link href="/register" className="font-semibold text-theme-accent-primary hover:brightness-110">
             Register now
           </Link>
         </div>

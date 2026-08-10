@@ -27,25 +27,25 @@ export const Navbar = () => {
     if (isAuthenticated) {
       return (
         <div className="flex items-center gap-4">
-          <Link 
-            href="/lobby" 
-            className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
+          <Link
+            href="/lobby"
+            className="text-sm font-medium text-theme-text-muted hover:text-theme-text-primary transition-colors"
           >
             Lobby
           </Link>
-          <Link 
-            href="/profile" 
-            className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
+          <Link
+            href="/profile"
+            className="text-sm font-medium text-theme-text-muted hover:text-theme-text-primary transition-colors"
           >
             Profile
           </Link>
-          <div className="h-4 w-[1px] bg-zinc-300 dark:bg-zinc-700 mx-2" />
-          <span className="text-xs text-zinc-500 hidden sm:inline">
+          <div className="h-4 w-[1px] bg-theme-border mx-2" />
+          <span className="text-xs text-theme-text-muted hidden sm:inline">
             {user?.username}
           </span>
-          <Button 
-            onClick={logout} 
-            variant="secondary" 
+          <Button
+            onClick={logout}
+            variant="secondary"
             size="sm"
           >
             Logout
@@ -56,9 +56,9 @@ export const Navbar = () => {
 
     return (
       <div className="flex items-center gap-4">
-        <Link 
-          href="/login" 
-          className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
+        <Link
+          href="/login"
+          className="text-sm font-medium text-theme-text-muted hover:text-theme-text-primary transition-colors"
         >
           Login
         </Link>
@@ -69,15 +69,16 @@ export const Navbar = () => {
     );
   };
 
+  // S2-T6: bg-primary + theme border replace the previous white/zinc navbar shell.
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/80 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/80">
+    <nav className="sticky top-0 z-50 w-full border-b border-theme-border bg-theme-bg-primary/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo / Home Link */}
-        <Link 
-          href="/" 
-          className="flex items-center gap-2 font-bold text-xl tracking-tight text-zinc-900 dark:text-zinc-50"
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-bold text-xl tracking-tight text-theme-text-primary"
         >
-          <span className="bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 px-2 py-0.5 rounded shadow-sm">
+          <span className="bg-theme-accent-primary text-theme-bg-primary px-2 py-0.5 rounded shadow-sm">
             GO
           </span>
           <span>Chess</span>
